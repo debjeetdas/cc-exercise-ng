@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <p class="helvetica-medium font-14 herq-gray">Are you sure to delete the card?</p>
+</div>
+<div mat-dialog-actions class="justify-content-end mb-0">
+  <button mat-button class="button_regular" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+  <button mat-button class="button_white" (click)="onNoClick()">No</button>
+</div>

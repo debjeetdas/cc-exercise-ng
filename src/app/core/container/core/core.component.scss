@@ -1,0 +1,32 @@
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 50px;
+}
+mat-nav-list {
+  padding: 0;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.active {
+  background: #673ab7;
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: #fff;
+    background: #673ab7;
+  }
+}

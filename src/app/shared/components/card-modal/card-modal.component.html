@@ -1,0 +1,53 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body pt-1">
+  <form [formGroup]="cardForm" class="">
+    <div class="row">
+      <div class="col-12">
+        <div class="width-100">
+          <div class="card-input">
+            <mat-form-field class="width-100">
+              <mat-label class="font-14">NAME</mat-label>
+              <input matInput formControlName="name" type="text" [errorStateMatcher]="matcher" />
+              <mat-error *ngIf="cardForm.controls['name'].hasError('required')">Please enter the application name!!!
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="card-input">
+            <mat-form-field class="width-100">
+              <mat-label class="font-14">CREDIT CARD NUMBER</mat-label>
+              <input matInput formControlName="ccnumber" type="text" [errorStateMatcher]="matcher" />
+              <mat-error *ngIf="cardForm.controls['ccnumber'].hasError('required')">Please enter the Credit Card number!!!
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="card-input">
+            <mat-form-field class="width-100">
+              <mat-label class="font-14">LIMIT</mat-label>
+              <input matInput formControlName="limit" type="text" [errorStateMatcher]="matcher" />
+              <span matPrefix>&#163;&nbsp;</span>
+              <mat-error *ngIf="cardForm.controls['limit'].hasError('required')">Please enter the Limit!!!
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="card-input">
+            <mat-form-field class="width-100">
+              <mat-label class="font-14">BALANCE</mat-label>
+              <input matInput formControlName="balance" type="text" [errorStateMatcher]="matcher" [value]="(this.card.id) ? this.card.balance : 0"/>
+              <span matPrefix>&#163;&nbsp;</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="button_regular height-35" (click)="createOrUpdateCard()">{{primaryBtnName}}</button>
+  <button type="button" class="button_white height-35" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+</div>

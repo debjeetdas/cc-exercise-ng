@@ -1,0 +1,33 @@
+.app-container {
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: calc(100vh - (132px + 1rem));
+  overflow: hidden;
+}
+.card-pagination {
+  bottom: 0;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+.table-container {
+  height: calc(100% - 56px);
+  overflow: scroll;
+}
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+td.mat-column-productType {
+  width: 30px;
+  padding-right: 30px;
+}
+.dropdown-menu {
+  left: -110px !important;
+  top: 0 !important;
+  min-width: auto;
+}
+.dropdown-item .mat-icon {
+  width: 18px;
+  height: 18px;
+}
