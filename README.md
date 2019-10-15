@@ -1,5 +1,7 @@
 # CcExerciseNg
 
+Install `nodejs`, `npm` and `angular cli` latest version in your machine to run this application
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
 ## Development server
